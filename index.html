@@ -93,24 +93,67 @@
             background: #16a34a;
         }
         
-   /* HEADER TRANSPARENT OVER HERO */
+/* ================================
+   HEADER TRANSPARENT OVER HERO
+   ================================ */
+
 #mainHeader {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    transition: all 0.35s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    transition: background 0.35s ease,
+                backdrop-filter 0.35s ease;
 }
 
-/* WHEN SCROLLING */
+/* Header content */
+#mainHeader nav {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#mainHeader .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* ================================
+   WHEN SCROLLING
+   ================================ */
+
 #mainHeader.scrolled {
-    background: rgba(15, 23, 42, 0.88);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(15, 23, 42, 0.88) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
 }
 
-/* NO PANEL AROUND LOGO AND MENU */
+/* Keep inner area transparent even when header becomes glass */
+#mainHeader.scrolled nav,
+#mainHeader.scrolled .header-inner {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove old panel effect */
 .header-panel {
     background: transparent !important;
     border: none !important;
@@ -118,13 +161,6 @@
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     border-radius: 0 !important;
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
 }
     </style>
 </head>
