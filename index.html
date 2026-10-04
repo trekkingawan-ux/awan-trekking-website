@@ -412,6 +412,23 @@ section:has(.awan-benefits-slider) {
         overflow: hidden !important;
     }
 }
+
+/* FINAL - REDUCE SPACE AFTER BENEFITS */
+section:has(.awan-benefits-slider) {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+section:has(.awan-benefits-slider) + section {
+    padding-top: 35px !important;
+    margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    section:has(.awan-benefits-slider) + section {
+        padding-top: 10px !important;
+    }
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
