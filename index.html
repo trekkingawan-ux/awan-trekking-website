@@ -1224,17 +1224,15 @@ window.addEventListener('scroll', function() {
 
 // 1. HERO SLIDER AUTO-CROSSFADE
 function initHeroSlider() {
-        // 1. HERO SLIDER AUTO-CROSSFADE
-        function initHeroSlider() {
-            const slides = document.querySelectorAll('.hero-slide');
-            let currentSlide = 0;
-            setInterval(() => {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }, 5000);
-        }
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
 
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+}
         // 2. LANGUAGE SWITCHER
         function toggleLangDropdown() {
             const dropdown = document.getElementById('langDropdown');
