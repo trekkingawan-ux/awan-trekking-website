@@ -370,6 +370,48 @@ section:has(.awan-benefits-slider) {
     padding-top: 16px !important;
     padding-bottom: 16px !important;
 }
+
+/* FIX BENEFITS SECTION - REMOVE EXTRA SPACE */
+section:has(.awan-benefits-slider) {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.awan-benefits-slider {
+    height: 170px !important;
+    min-height: 170px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.awan-benefits-slider > .glass-card {
+    margin: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    section:has(.awan-benefits-slider) {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .awan-benefits-slider {
+        height: 170px !important;
+        min-height: 170px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
