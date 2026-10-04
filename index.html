@@ -553,17 +553,32 @@ section:has(.awan-benefits-slider) + section {
     }
 }
 /* =========================================
-   STUNNING VIEWS — MOVE DOWN
+   STUNNING VIEWS — FINAL POSITION
    ========================================= */
 
-.awan-benefits-slider > .glass-card:nth-child(3) {
-    top: 22px !important;
+.awan-benefits-slider {
+    position: relative !important;
+    margin-top: 35px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Semua card tetap menjadi slider */
+.awan-benefits-slider > .glass-card {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .awan-benefits-slider > .glass-card:nth-child(3) {
-        top: 35px !important;
+    .awan-benefits-slider {
+        margin-top: 35px !important;
+    }
+
+    .awan-benefits-slider > .glass-card {
+        top: 0 !important;
+        left: 0 !important;
     }
 }
 </style>
