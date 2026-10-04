@@ -162,7 +162,48 @@
     -webkit-backdrop-filter: none !important;
     border-radius: 0 !important;
 }
-    </style>
+   <style>
+/* =================================
+   AWAN TREKKING - AUTO BENEFITS
+   ================================= */
+
+.awan-benefits-slider {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  position: relative;
+}
+
+.awan-benefits-slider > div {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(25px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    visibility 0.7s ease;
+}
+
+.awan-benefits-slider > div.awan-benefit-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .awan-benefits-slider {
+    grid-template-columns: 1fr !important;
+  }
+
+  .awan-benefits-slider > div {
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
 
@@ -1611,6 +1652,79 @@ window.addEventListener('scroll', function () {
         header.classList.remove('scrolled');
     }
 });
-    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const firstTitle = document.querySelector(
+    '[data-i18n="ben_1_title"]'
+  );
+
+  if (!firstTitle) return;
+
+  /*
+   * Cari container yang berisi 4 benefit cards
+   */
+  let container = firstTitle.closest('.grid');
+
+  if (!container) return;
+
+  const titles = [
+    'ben_1_title',
+    'ben_2_title',
+    'ben_3_title',
+    'ben_4_title'
+  ];
+
+  const cards = titles
+    .map(function (id) {
+      const title = container.querySelector(
+        '[data-i18n="' + id + '"]'
+      );
+
+      return title ? title.closest('.glass-card') : null;
+    })
+    .filter(Boolean);
+
+  if (cards.length !== 4) return;
+
+  /*
+   * Ubah container menjadi automatic slider
+   */
+  container.classList.add('awan-benefits-slider');
+
+  /*
+   * Aktifkan card pertama
+   */
+  cards.forEach(function (card) {
+    card.classList.remove('awan-benefit-active');
+  });
+
+  cards[0].classList.add('awan-benefit-active');
+
+  let current = 0;
+
+  /*
+   * Ganti card setiap 4 detik
+   */
+  setInterval(function () {
+
+    cards[current].classList.remove(
+      'awan-benefit-active'
+    );
+
+    current++;
+
+    if (current >= cards.length) {
+      current = 0;
+    }
+
+    cards[current].classList.add(
+      'awan-benefit-active'
+    );
+
+  }, 4000);
+
+});
+</script>
 </body>
 </html>
