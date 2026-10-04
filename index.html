@@ -1213,46 +1213,104 @@
                 const card = document.createElement('div');
                 card.className = "glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-xl";
                 card.innerHTML = `
-                    <div>
-                        <div class="relative h-48 sm:h-52 overflow-hidden">
-                            <img src="${tour.img}" alt="${tour.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                            <span class="absolute top-3 left-3 ${tour.badgeColor} text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow-lg">
-                                ${tour.badge}
-                            </span>
-                            <span class="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-lg border border-slate-700">
-                                <i class="fa-regular fa-clock mr-1 text-brand-400"></i>${tour.duration}
-                            </span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-extrabold text-white mb-2 font-heading group-hover:text-brand-400 transition">${tour.name}</h3>
-                            <p class="text-xs text-slate-400 mb-4 line-clamp-2 leading-relaxed">${tour.desc}</p>
-                            
-                            <div class="space-y-1.5 mb-6">
-                                ${tour.facilities.slice(0, 3).map(f => `
-                                    <div class="text-xs text-slate-300 flex items-center gap-2">
-                                        <i class="fa-solid fa-check text-brand-400 text-[10px]"></i>
-                                        <span>${f}</span>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
+                 <div>
+    <div class="relative h-52 sm:h-60 overflow-hidden">
+        <img src="${tour.img}" alt="${tour.name}"
+             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-                    <div class="p-6 pt-0 border-t border-slate-800/80 flex items-center justify-between mt-auto">
-                        <div>
-                            <div class="text-[10px] uppercase text-slate-400 font-semibold">From</div>
-                            <div class="text-xl font-extrabold text-amber-400 font-heading">IDR ${(tour.price).toLocaleString('id-ID')}</div>
-                        </div>
-                        <div class="flex gap-2">
-                            <button onclick="openTourModal('${tour.id}')">
-                               VIEW DETAILS
-                               </button>
-                            <button onclick="selectTourForBooking('${tour.id}')" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold uppercase transition shadow-lg shadow-brand-600/20">
-                                Select
-                            </button>
-                        </div>
-                    </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+        <span class="absolute top-4 left-4 ${tour.badgeColor} text-white text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full shadow-lg">
+            ${tour.badge}
+        </span>
+    </div>
+
+    <div class="p-6 sm:p-7">
+
+        <div class="flex items-center gap-2 text-sm text-slate-400 mb-3">
+            <img src="location_4616036.png"
+                 class="w-5 h-5 object-contain"
+                 alt="Location">
+            <span>Kintamani, Bali</span>
+        </div>
+
+        <h3 class="text-lg sm:text-xl font-extrabold text-white mb-4 font-heading group-hover:text-brand-400 transition">
+            ${tour.name}
+        </h3>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-slate-300">
+
+            <span class="flex items-center gap-2">
+                <img src="Bintang.png"
+                     class="w-5 h-5 object-contain"
+                     alt="Rating">
+                <strong class="text-amber-400">5.0</strong>
+            </span>
+
+            <span class="flex items-center gap-2">
+                <img src="Jam.png"
+                     class="w-5 h-5 object-contain"
+                     alt="Duration">
+                ${tour.duration}
+            </span>
+
+            <span class="flex items-center gap-2">
+                <img src="Sedang.png"
+                     class="w-5 h-5 object-contain"
+                     alt="Difficulty">
+                Moderate
+            </span>
+
+        </div>
+
+        <div class="mt-6">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">
+                Available Options
+            </h4>
+
+            <div class="flex flex-wrap gap-2 mt-3">
+                ${tour.facilities.slice(0, 4).map(f => `
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-[11px] text-slate-300">
+                        ${f}
+                    </span>
+                `).join('')}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="p-6 sm:p-7 pt-5 border-t border-slate-800/80">
+
+    <div class="flex items-end justify-between gap-4">
+
+        <div>
+            <div class="text-[10px] uppercase text-slate-400 font-semibold">
+                From
+            </div>
+
+            <div class="text-xl font-extrabold text-amber-400 font-heading">
+                IDR ${(tour.price).toLocaleString('id-ID')}
+            </div>
+        </div>
+
+        <div class="flex gap-2">
+
+            <button onclick="openTourModal('${tour.id}')"
+                class="px-3 py-2.5 rounded-xl border border-slate-700 hover:border-brand-500 text-slate-200 text-[10px] font-bold uppercase transition">
+                VIEW PACKAGES
+            </button>
+
+            <button onclick="selectTourForBooking('${tour.id}')"
+                class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-[10px] font-bold uppercase transition shadow-lg shadow-brand-600/20">
+                BOOKING
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
                 `;
                 container.appendChild(card);
             });
