@@ -553,13 +553,18 @@ section:has(.awan-benefits-slider) + section {
     }
 }
 /* =========================================
-   STUNNING VIEWS — FINAL POSITION
+   STUNNING VIEWS — FINAL FIX
    ========================================= */
 
 .awan-benefits-slider {
     position: relative !important;
-    margin-top: 35px !important;
+    margin-top: 20px !important;
     margin-bottom: 0 !important;
+
+    height: 230px !important;
+    min-height: 230px !important;
+
+    overflow: hidden !important;
 }
 
 /* Semua card tetap menjadi slider */
@@ -570,15 +575,30 @@ section:has(.awan-benefits-slider) + section {
     width: 100% !important;
 }
 
+/* Pastikan section berikutnya tidak menimpa */
+section:has(.awan-benefits-slider) + section {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+
     .awan-benefits-slider {
-        margin-top: 35px !important;
+        margin-top: 20px !important;
+        height: 230px !important;
+        min-height: 230px !important;
+        overflow: hidden !important;
     }
 
     .awan-benefits-slider > .glass-card {
         top: 0 !important;
         left: 0 !important;
+    }
+
+    section:has(.awan-benefits-slider) + section {
+        margin-top: 0 !important;
+        padding-top: 20px !important;
     }
 }
 </style>
