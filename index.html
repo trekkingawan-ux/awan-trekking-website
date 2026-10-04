@@ -203,6 +203,31 @@
     width: 100%;
   }
 }
+/* ========================================
+   BENEFITS - ICON BESIDE TEXT
+   ======================================== */
+
+.awan-benefits-slider .glass-card {
+    display: grid !important;
+    grid-template-columns: 70px 1fr !important;
+    column-gap: 18px !important;
+    align-items: start !important;
+}
+
+.awan-benefits-slider .glass-card > div:first-child {
+    grid-column: 1 !important;
+    grid-row: 1 / 4 !important;
+    margin: 0 !important;
+}
+
+.awan-benefits-slider .glass-card > h3 {
+    grid-column: 2 !important;
+    margin: 0 !important;
+}
+
+.awan-benefits-slider .glass-card > p {
+    grid-column: 2 !important;
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
