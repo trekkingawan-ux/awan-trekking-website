@@ -335,11 +335,11 @@
    ======================================== */
 
 .awan-benefits-slider {
-    height: 240px !important;
-    min-height: 240px !important;
-    max-height: 240px !important;
-    padding: 0 !important;
+    min-height: 180px !important;
+    height: 180px !important;
     margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .awan-benefits-slider > .glass-card {
@@ -349,12 +349,26 @@
 /* MOBILE */
 @media (max-width: 768px) {
     .awan-benefits-slider {
-        height: 240px !important;
-        min-height: 240px !important;
-        max-height: 240px !important;
-        padding: 0 !important;
+        min-height: 170px !important;
+        height: 170px !important;
         margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
     }
+
+    .awan-benefits-slider .glass-card {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 12px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* COMPRESS BENEFITS SECTION */
+section:has(.awan-benefits-slider) {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
 }
 </style>
 </head>
