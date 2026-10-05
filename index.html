@@ -296,7 +296,16 @@
     align-items: start !important;
     padding: 20px !important;
 }
+@media (max-width: 768px) {
 
+    .awan-benefits-slider .glass-card {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+}
 .awan-benefits-slider .glass-card > div:first-child {
     grid-column: 1 !important;
     grid-row: 1 / 4 !important;
@@ -830,6 +839,19 @@ section:has(.awan-benefits-slider) + section {
         margin-bottom: 25px !important;
         padding-bottom: 5px !important;
     }
+}
+/* FINAL MOBILE CARD WIDTH */
+@media (max-width: 768px) {
+
+    .awan-benefits-slider > .glass-card {
+        width: calc(100% - 28px) !important;
+        max-width: none !important;
+        justify-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
 }
 <style>
 /* =========================================
