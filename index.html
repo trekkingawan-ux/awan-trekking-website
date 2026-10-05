@@ -1882,11 +1882,14 @@ iframe {
         let currentLang = 'en';
 
         window.onload = function() {
-            initHeroSlider();
-            renderTours('all');
-            populateTourSelectOptions();
-            renderGallery('all');
-            calculateBookingTotal();
+    initHeroSlider();
+
+    console.log("TOUR START");
+    console.log("TOUR GRID:", document.getElementById('tourCardsGrid'));
+    console.log("TOUR DATA:", TOURS_DATA);
+
+    renderTours('all');
+    populateTourSelectOptions();
             
             // Set default date to tomorrow
             const tomorrow = new Date();
