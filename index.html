@@ -770,6 +770,67 @@ section:has(.awan-benefits-slider) + section {
         box-sizing: border-box !important;
     }
 }
+/* =========================================
+   MOBILE SIZE & SPACING FIX
+   AWAN TREKKING
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Stats section */
+    .awan-benefits-slider,
+    .glass-card {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .awan-benefits-slider {
+        padding: 0 16px !important;
+    }
+
+    /* Kurangi tinggi kartu statistik */
+    .glass-card {
+        padding: 18px 12px !important;
+        min-height: 110px !important;
+    }
+
+    /* Private Tours card */
+    .quick-benefit,
+    .private-tours,
+    .benefit-card {
+        min-height: 0 !important;
+    }
+
+    /* Section yang berisi Private Tours */
+    .quick-benefits {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    /* Kurangi jarak kosong sebelum Explore */
+    #tours {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    /* Judul Explore */
+    #tours h2 {
+        margin-bottom: 22px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Deskripsi */
+    #tours p {
+        margin-bottom: 28px !important;
+    }
+
+    /* Filter kategori */
+    #tours .filter-bar {
+        margin-bottom: 25px !important;
+        padding-bottom: 5px !important;
+    }
+}
 <style>
 /* =========================================
    AWAN TREKKING - FINAL MOBILE WIDTH FIX
