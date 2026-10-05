@@ -2344,41 +2344,20 @@ window.addEventListener('scroll', function () {
 
     cards[0].classList.add('awan-benefit-active');
 
-    // Ganti kartu setiap 5 detik
-    setInterval(function () {
+// Ganti kartu setiap 5 detik
+setInterval(function () {
 
-        const oldCard = cards[current];
+    const oldCard = cards[current];
 
-        oldCard.classList.remove(
-            'awan-benefit-active'
-        );
+    oldCard.classList.remove('awan-benefit-active');
 
-        oldCard.classList.add(
-            'awan-benefit-exit'
-        );
+    current = (current + 1) % cards.length;
 
-        current = (current + 1) % cards.length;
+    const newCard = cards[current];
 
-        const newCard = cards[current];
+    newCard.classList.add('awan-benefit-active');
 
-        newCard.classList.remove(
-            'awan-benefit-exit'
-        );
-
-        newCard.classList.add(
-            'awan-benefit-active'
-        );
-
-        // Reset kartu lama setelah animasi
-        setTimeout(function () {
-
-            oldCard.classList.remove(
-                'awan-benefit-exit'
-            );
-
-        }, 850);
-
-    }, 5000);
+}, 5000);
 
 })();
 </script>
