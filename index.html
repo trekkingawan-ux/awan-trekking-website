@@ -1717,128 +1717,206 @@ section:has(.awan-benefits-slider) + section {
     <script>
         // TOURS DATA DATABASE
         const TOURS_DATA = [
-            {
-                id: 't1',
-                category: 'trekking',
-                name: 'MOUNT BATUR SUNRISE TREKKING PRIVATE TOUR',
-                price: 350000,
-                duration: '4 - 5 Hours',
-                badge: 'BEST SELLER',
-                badgeColor: 'bg-emerald-500',
-                img: 'IMG_4265.jpeg',
-                desc: 'Experience an exclusive private sunrise hike up Mount Batur with your personal Kintamani guide.',
-                facilities: ['Private Local Guide', 'Flashlight / Headlamp', 'Walking Stick', 'Summit Breakfast & Tea', 'Mineral Water', 'Volcano Entrance Ticket']
-            },
-            {
-                id: 't2',
-                category: 'trekking',
-                name: 'MOUNT BATUR TREKKING AND HOT SPRING',
-                price: 500000,
-                duration: '6 - 7 Hours',
-                badge: 'MOST POPULAR',
-                badgeColor: 'bg-amber-500',
-                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-                desc: 'Combine the early morning volcano summit hike with soaking in natural volcanic thermal hot springs.',
-                facilities: ['Private Mount Batur Guide', 'Natural Hot Spring Ticket', 'Summit Breakfast', 'Locker & Towel at Hot Spring', 'Hot Tea/Coffee', 'Entrance Fees']
-            },
-            {
-                id: 't3',
-                category: 'trekking',
-                name: 'MOUNT BATUR TREKKING & ATV',
-                price: 850000,
-                duration: '8 Hours',
-                badge: 'ACTION COMBO',
-                badgeColor: 'bg-red-500',
-                img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-                desc: 'Hike for sunrise and ride powerful 250cc ATV quad bikes through volcanic black sand tracks.',
-                facilities: ['Sunrise Hiking Guide', '2 Hours Quad ATV Ride', 'Safety Gear & Helmet', 'Buffet Lunch', 'Insurance Included', 'Hot Spring Access']
-            },
-            {
-                id: 't4',
-                category: 'trekking',
-                name: 'MOUNT BATUR TREKKING & RAFTING',
-                price: 800000,
-                duration: '9 Hours',
-                badge: 'ADVENTURE',
-                badgeColor: 'bg-blue-500',
-                img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-                desc: 'Morning sunrise mountain trek followed by thrilling white water rafting on Ayung River in Ubud.',
-                facilities: ['Summit Hiking Guide', '2 Hours White Water Rafting', 'Rafting Equipment & Guide', 'Buffet Lunch', 'Hot Shower & Changing Rooms']
-            },
-            {
-                id: 'j1',
-                category: 'jeep',
-                name: 'MOUNT BATUR SUNRISE JEEP TOUR',
-                price: 450000,
-                duration: '4 Hours',
-                badge: 'NO HIKING NEEDED',
-                badgeColor: 'bg-amber-500',
-                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-                desc: 'Ride an open 4WD Classic Jeep to Mount Batur sunrise viewpoint and volcanic black lava fields.',
-                facilities: ['4WD Classic Jeep Driver', 'Professional Photo Service', 'Hot Coffee / Tea on Jeep', 'Volcano Entrance Ticket', 'Black Lava Exploration']
-            },
-            {
-                id: 'j2',
-                category: 'jeep',
-                name: 'MOUNT BATUR SUNSET JEEP TOUR',
-                price: 450000,
-                duration: '4 Hours',
-                badge: 'AFTERNOON VIBES',
-                badgeColor: 'bg-orange-500',
-                img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-                desc: 'Enjoy golden hour sunsets over black sand dunes and volcanic craters without early wake-ups.',
-                facilities: ['4WD Custom Jeep', 'Sunset Coffee/Tea', 'Black Sand Dune Cruise', 'Local Jeep Guide', 'All Entrance Tickets']
-            },
-            {
-                id: 'c1',
-                category: 'combo',
-                name: 'MOUNT BATUR JEEP & SUNRISE TREK COMBINATION',
-                price: 650000,
-                duration: '6 Hours',
-                badge: 'BEST EXPERIENCE',
-                badgeColor: 'bg-teal-500',
-                img: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
-                desc: 'Jeep ride up to half-mountain point, then short 45-minute trek to the true summit crater peak!',
-                facilities: ['4WD Jeep Ride', 'Summit Hiking Guide', 'Summit Breakfast', 'Black Lava Photoshoot', 'Hot Beverage']
-            },
-            {
-                id: 't5',
-                category: 'trekking',
-                name: 'MOUNT AGUNG SUNRISE TREK',
-                price: 950000,
-                duration: '10 Hours',
-                badge: 'CHALLENGING',
-                badgeColor: 'bg-purple-600',
-                img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-                desc: 'Hike Bali highest sacred peak (3,142m) for fit travelers seeking ultimate trekking glory.',
-                facilities: ['Expert Agung Local Guide', 'Headlamp & Gloves', 'High Energy Snacks & Drinks', 'Sacred Temple Permits', 'First Aid Equipment']
-            },
-            {
-                id: 'a1',
-                category: 'atv',
-                name: 'UBUD & JUNGLE SWING + ATV PACKAGE',
-                price: 750000,
-                duration: '7 Hours',
-                badge: 'FUN FAMILY',
-                badgeColor: 'bg-emerald-600',
-                img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-                desc: 'Explore Ubud rice terraces, fly high on famous jungle swings, and ride ATVs through mud caves.',
-                facilities: ['250cc ATV Ride', 'Jungle Swing Ticket', 'Rice Terrace Entrance', 'Safety Gear', 'Indonesian Lunch']
-            },
-            {
-                id: 'w1',
-                category: 'waterfall',
-                name: 'BALI WATERFALL TOUR & TUKAD CEPUNG',
-                price: 550000,
-                duration: '7 Hours',
-                badge: 'INSTAGRAMMABLE',
-                badgeColor: 'bg-blue-600',
-                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-                desc: 'Visit cave sunbeam waterfall Tukad Cepung, Kanto Lampo, and Tibumana natural pools.',
-                facilities: ['Private Air-Conditioned Car', 'English Speaking Driver', 'All Waterfall Tickets', 'Mineral Water Bottles']
-            }
-        ];
+    {
+        id: 't1',
+        category: 'trekking',
+        name: 'Mount Batur Sunrise Trekking',
+        price: 350000,
+        duration: '4 - 5 Hours',
+        badge: 'BEST SELLER',
+        badgeColor: 'bg-emerald-500',
+        img: 'IMG_4265.jpeg',
+        desc: 'Experience an unforgettable sunrise trek to the summit of Mount Batur with a local guide.',
+        facilities: [
+            'Private Local Guide',
+            'Flashlight / Headlamp',
+            'Walking Stick',
+            'Breakfast & Tea',
+            'Mineral Water',
+            'Volcano Entrance Ticket'
+        ]
+    },
 
+    {
+        id: 'j1',
+        category: 'jeep',
+        name: 'Mount Batur Sunrise Jeep Tour',
+        price: 700000,
+        duration: '5 - 6 Hours',
+        badge: 'NO HIKING NEEDED',
+        badgeColor: 'bg-amber-500',
+        img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+        desc: 'Enjoy the sunrise from Mount Batur by 4WD Jeep and explore the volcanic landscape.',
+        facilities: [
+            '4WD Jeep',
+            'Local Jeep Driver',
+            'Sunrise Viewpoint',
+            'Breakfast',
+            'Entrance Donation',
+            'Black Lava'
+        ]
+    },
+
+    {
+        id: 't2',
+        category: 'trekking',
+        name: 'Mount Batur Day Trekking',
+        price: 350000,
+        duration: '4 - 5 Hours',
+        badge: 'DAY TREKKING',
+        badgeColor: 'bg-blue-500',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
+        desc: 'Discover Mount Batur during the daytime with a private local trekking guide.',
+        facilities: [
+            'Private Local Guide',
+            'Walking Stick',
+            'Mineral Water',
+            'Breakfast',
+            'Entrance Ticket',
+            'Safety Equipment'
+        ]
+    },
+
+    {
+        id: 'j2',
+        category: 'jeep',
+        name: 'Mount Batur Daytime Jeep Tour',
+        price: 700000,
+        duration: '4 - 5 Hours',
+        badge: 'DAY ADVENTURE',
+        badgeColor: 'bg-orange-500',
+        img: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
+        desc: 'Explore Mount Batur and its volcanic scenery during the daytime by 4WD Jeep.',
+        facilities: [
+            '4WD Jeep',
+            'Local Jeep Driver',
+            'Black Lava',
+            'Black Sand',
+            'Entrance Donation',
+            'Mineral Water'
+        ]
+    },
+
+    {
+        id: 't3',
+        category: 'trekking',
+        name: 'Mount Batur Sunset Trekking',
+        price: 350000,
+        duration: '4 - 5 Hours',
+        badge: 'SUNSET EXPERIENCE',
+        badgeColor: 'bg-orange-500',
+        img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+        desc: 'Hike Mount Batur in the afternoon and enjoy a spectacular sunset from the mountain.',
+        facilities: [
+            'Private Local Guide',
+            'Walking Stick',
+            'Flashlight',
+            'Mineral Water',
+            'Entrance Ticket',
+            'Sunset Experience'
+        ]
+    },
+
+    {
+        id: 'j3',
+        category: 'jeep',
+        name: 'Mount Batur Sunset Jeep Tour',
+        price: 700000,
+        duration: '4 - 5 Hours',
+        badge: 'SUNSET EXPERIENCE',
+        badgeColor: 'bg-purple-500',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
+        desc: 'Enjoy a beautiful Mount Batur sunset adventure by 4WD Jeep.',
+        facilities: [
+            '4WD Jeep',
+            'Local Jeep Driver',
+            'Sunset Viewpoint',
+            'Black Lava',
+            'Black Sand',
+            'Entrance Donation'
+        ]
+    },
+
+    {
+        id: 'w1',
+        category: 'waterfall',
+        name: 'Bali Best Waterfall Tour',
+        price: 550000,
+        duration: '7 - 8 Hours',
+        badge: 'BEST OF BALI',
+        badgeColor: 'bg-blue-600',
+        img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+        desc: 'Discover some of Bali's most beautiful waterfalls and enjoy the natural scenery.',
+        facilities: [
+            'Private Car',
+            'English Speaking Driver',
+            'Waterfall Entrance',
+            'Mineral Water',
+            'Private Tour',
+            'Hotel Pickup'
+        ]
+    },
+
+    {
+        id: 'a1',
+        category: 'atv',
+        name: 'Bali Quad Bike ATV Adventure',
+        price: 750000,
+        duration: '6 - 7 Hours',
+        badge: 'ADVENTURE',
+        badgeColor: 'bg-red-500',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
+        desc: 'Experience an exciting Bali ATV adventure through jungle tracks, villages and scenic landscapes.',
+        facilities: [
+            'Quad Bike ATV',
+            'Safety Equipment',
+            'Professional Guide',
+            'Shower Facility',
+            'Lunch',
+            'Insurance'
+        ]
+    },
+
+    {
+        id: 'r1',
+        category: 'rafting',
+        name: 'Ayung River Rafting Adventure',
+        price: 700000,
+        duration: '5 - 6 Hours',
+        badge: 'ADVENTURE',
+        badgeColor: 'bg-blue-500',
+        img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+        desc: 'Enjoy an exciting white water rafting adventure along the beautiful Ayung River in Bali.',
+        facilities: [
+            'Rafting Equipment',
+            'Professional Rafting Guide',
+            'Safety Equipment',
+            'Lunch',
+            'Shower Facility',
+            'Insurance'
+        ]
+    },
+
+    {
+        id: 'c1',
+        category: 'combo',
+        name: 'ATV & Ayung River Rafting',
+        price: 850000,
+        duration: '8 - 9 Hours',
+        badge: 'COMBO ADVENTURE',
+        badgeColor: 'bg-teal-500',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
+        desc: 'Combine an exciting ATV ride with a thrilling Ayung River white water rafting adventure.',
+        facilities: [
+            'Quad Bike ATV',
+            'Ayung River Rafting',
+            'Safety Equipment',
+            'Professional Guides',
+            'Lunch',
+            'Insurance'
+        ]
+    }
+];
         const GALLERY_DATA = [
             { id: 1, category: 'trekking', url: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80', title: 'Mount Batur Summit Sunrise' },
             { id: 2, category: 'jeep', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80', title: '4WD Jeep at Black Lava' },
