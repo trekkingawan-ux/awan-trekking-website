@@ -1981,21 +1981,31 @@ section:has(.awan-benefits-slider) + section {
 
         let currentLang = 'en';
 
-        window.onload = function() {
+        document.addEventListener('DOMContentLoaded', function () {
+
+    console.log("AWAN TREKKING WEBSITE START");
+
+    // Start Hero Slider
     initHeroSlider();
 
-    console.log("TOUR START");
-    console.log("TOUR GRID:", document.getElementById('tourCardsGrid'));
-    console.log("TOUR DATA:", TOURS_DATA);
-
+    // Render all tour cards
     renderTours('all');
+
+    // Populate booking tour list
     populateTourSelectOptions();
-            
-            // Set default date to tomorrow
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            document.getElementById('trekDate').value = tomorrow.toISOString().split('T')[0];
-        };
+
+    // Set default date to tomorrow
+    const trekDate = document.getElementById('trekDate');
+
+    if (trekDate) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        trekDate.value = tomorrow.toISOString().split('T')[0];
+    }
+
+    console.log("TOURS RENDERED:", TOURS_DATA.length);
+
+});
 
 // HEADER TRANSPARENT AT TOP / GLASS ON SCROLL
 window.addEventListener('scroll', function() {
