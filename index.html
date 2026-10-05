@@ -110,18 +110,13 @@
    ================================ */
 
 #mainHeader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
+    z-index: 100 !important;
+}
 
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-
-    transition: background 0.35s ease,
-                backdrop-filter 0.35s ease;
+#mainHeader img[alt="Awan Trekking Logo"] {
+    position: relative;
+    z-index: 101 !important;
+    display: block;
 }
 
 /* Header content */
@@ -801,16 +796,13 @@ section:has(.awan-benefits-slider) + section {
              <div class="header-inner flex items-center justify-between w-full">
                 <!-- Brand Logo & Slogan -->
                 <a href="#home" class="flex items-center gap-3 group">
-                   <div class="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0">
+                  <div class="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0 relative z-[100]">
 
-    <img src="Logoweb.png"
-
-         alt="Awan Trekking Logo"
-
-         class="w-full h-full object-contain">
+<img src="Logoweb.png"
+     alt="Awan Trekking Logo"
+     class="w-full h-full object-contain relative z-[101]">
 
 </div>
-                    <div>
                         <div class="font-extrabold text-lg sm:text-xl tracking-tight leading-none text-white font-heading">
                             AWAN<span class="text-brand-500">TREKKING</span>
                         </div>
