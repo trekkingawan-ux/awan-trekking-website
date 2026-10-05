@@ -1018,7 +1018,7 @@ section:has(.awan-benefits-slider) + section {
         </div>
 
         <!-- Tour Cards Grid Container -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="tourCardsGrid">
+        <div class="grid grid-cols-1 min-w-0 w-full md:grid-cols-...">
             <!-- Dynamically injected via JS -->
         </div>
     </section>
@@ -1899,7 +1899,7 @@ function initHeroSlider() {
 
             filtered.forEach(tour => {
                 const card = document.createElement('div');
-                card.className = "glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-500/40 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-xl";
+                card.className = "glass-card rounded-3xl min-w-0 w-full max-w-full overflow-hidden";
                 card.innerHTML = `
                  <div>
     <div class="relative h-52 sm:h-60 overflow-hidden">
