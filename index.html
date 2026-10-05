@@ -668,6 +668,29 @@ section:has(.awan-benefits-slider) + section {
 .awan-benefits-slider .glass-card p {
     color: rgba(225, 235, 245, 0.78) !important;
 }
+/* =========================================
+   STUNNING VIEWS — LOCK CARD WIDTH
+   ========================================= */
+
+.awan-benefits-slider {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.awan-benefits-slider > .glass-card {
+    width: calc(100% - 0px) !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Prevent glass effect from extending outside card */
+.awan-benefits-slider > .glass-card::before {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
