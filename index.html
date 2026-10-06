@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWAN TREKKING - Mount Batur Adventures</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-mountain-sun text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">AWAN TREKKING</span>
+                    <span class="block text-xs text-slate-400 tracking-widest uppercase">Mount Batur Adventures</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#packages" class="hover:text-amber-400 transition-colors">Paket Pendakian</a>
+                <a href="#experience" class="hover:text-amber-400 transition-colors">Pengalaman</a>
+                <a href="#reviews" class="hover:text-amber-400 transition-colors">Ulasan</a>
+                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-5 py-2.5 rounded-xl font-semibold transition-all shadow-lg shadow-amber-500/20">Pesan Sekarang</a>
+            </nav>
+            <button class="md:hidden text-slate-300 hover:text-white focus:outline-none" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#packages" class="block py-2 text-slate-300 hover:text-amber-400">Paket Pendakian</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-amber-400">Pengalaman</a>
+            <a href="#reviews" class="block py-2 text-slate-300 hover:text-amber-400">Ulasan</a>
+            <a href="#booking" class="block py-2 text-amber-400 font-semibold">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1584646098378-0874589d76b1?q=80&w=1920&auto=format&fit=crop" alt="Mount Batur Sunrise" class="w-full h-full object-cover brightness-50 scale-105 animate-pulse duration-[10000ms]">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20">
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-medium tracking-wide mb-6 backdrop-blur-md">
+                <i class="fa-solid fa-bolt"></i> Pengalaman Sunrise Terbaik di Bali
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Taklukkan Puncak <span class="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">Mount Batur</span> Bersama Kami
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light">
+                Nikmati pemandangan matahari terbit yang magis di atas awan, sarapan vulkanik yang unik, dan pemandu lokal profesional bersertifikat.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-slate-950 font-bold rounded-2xl shadow-xl shadow-amber-500/20 transition-all transform hover:-translate-y-0.5">
+                    Mulai Reservasi Cepat <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#packages" class="w-full sm:w-auto px-8 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-white font-semibold rounded-2xl backdrop-blur-md transition-all">
+                    Lihat Pilihan Paket
+                </a>
+            </div>
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+                <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-2xl backdrop-blur-sm">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-400 mb-1">4.9/5</div>
+                    <div class="text-xs text-slate-400">Rating Pengguna (1,240+ Ulasan)</div>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-2xl backdrop-blur-sm">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-400 mb-1">100%</div>
+                    <div class="text-xs text-slate-400">Pemandu Lokal Berlisensi</div>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-2xl backdrop-blur-sm">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-400 mb-1">15K+</div>
+                    <div class="text-xs text-slate-400">Pendaki Sukses</div>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-2xl backdrop-blur-sm">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-400 mb-1">24/7</div>
+                    <div class="text-xs text-slate-400">Dukungan Pelanggan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-semibold tracking-widest text-amber-500 uppercase mb-3">PILIHAN PETUALANGAN</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pilih Paket Trekking Sesuai Gaya Anda</h3>
+            <p class="text-slate-400">Setiap paket dirancang untuk memberikan pengalaman pendakian paling aman, nyaman, dan berkesan.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Package 1 -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-amber-500/10 text-amber-400 text-xs font-semibold px-4 py-1.5 rounded-bl-2xl border-l border-b border-amber-500/20">Populer</div>
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-2">Standard Sunrise Trek</h4>
+                    <p class="text-sm text-slate-400 mb-6">Pendakian klasik melihat matahari terbit dari puncak kawah aktif Mount Batur.</p>
+                    <div class="text-3xl font-extrabold text-amber-400 mb-6">IDR 450k <span class="text-xs font-normal text-slate-400">/ orang</span></div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Pemandu Profesional Lokal</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Sarapan Vulkanik di Puncak</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Tiket Masuk Kintamani & Gunung</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Senter & Air Mineral</li>
+                    </ul>
+                </div>
+                <button onclick="selectPackage('Standard Sunrise Trek', 450000)" class="w-full py-3.5 bg-slate-800 group-hover:bg-amber-500 group-hover:text-slate-950 font-semibold rounded-2xl transition-all">Pilih Paket Ini</button>
+            </div>
+            <!-- Package 2 -->
+            <div class="bg-slate-950 border-2 border-amber-500 rounded-3xl p-8 flex flex-col justify-between shadow-2xl shadow-amber-500/10 relative overflow-hidden transform md:-translate-y-2">
+                <div class="absolute top-0 right-0 bg-amber-500 text-slate-950 text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Rekomendasi</div>
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-2">Mount Batur + Natural Hot Spring</h4>
+                    <p class="text-sm text-slate-400 mb-6">Kombinasi sempurna: mendaki gunung lalu relaksasi di pemandian air panas alami Toya Devasya.</p>
+                    <div class="text-3xl font-extrabold text-amber-400 mb-6">IDR 650k <span class="text-xs font-normal text-slate-400">/ orang</span></div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Semua fasilitas Standard Trek</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Tiket Masuk Pemandian Air Panas</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Handuk & Loker Termasuk</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Makan Siang Kopi Luwak / Resto Lokal</li>
+                    </ul>
+                </div>
+                <button onclick="selectPackage('Mount Batur + Natural Hot Spring', 650000)" class="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-2xl transition-all shadow-lg shadow-amber-500/20">Pilih Paket Ini</button>
+            </div>
+            <!-- Package 3 -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-amber-500/10 text-amber-400 text-xs font-semibold px-4 py-1.5 rounded-bl-2xl border-l border-b border-amber-500/20">VIP / Private</div>
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-2">Private Jeep Tour + Hot Spring</h4>
+                    <p class="text-sm text-slate-400 mb-6">Tanpa lelah berjalan kaki! Nikmati perjalanan 4x4 Jeep langsung ke titik pandang sunrise.</p>
+                    <div class="text-3xl font-extrabold text-amber-400 mb-6">IDR 950k <span class="text-xs font-normal text-slate-400">/ orang</span></div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Private 4WD Mountain Jeep</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Driver & Guide Pribadi</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Sarapan Vulkanik Eksklusif</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-amber-500"></i> Akses VIP Natural Hot Spring</li>
+                    </ul>
+                </div>
+                <button onclick="selectPackage('Private Jeep Tour + Hot Spring', 950000)" class="w-full py-3.5 bg-slate-800 group-hover:bg-amber-500 group-hover:text-slate-950 font-semibold rounded-2xl transition-all">Pilih Paket Ini</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-semibold tracking-widest text-amber-500 uppercase mb-3 block">SISTEM RESERVASI BARU</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Pesan Petualangan Anda Sekarang</h2>
+                <p class="text-slate-400">Isi formulir wizard interaktif di bawah ini untuk mengamankan slot pendakian Anda.</p>
+            </div>
+
+            <!-- Booking Card Container -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <!-- Wizard Progress Indicator -->
+                <div class="flex items-center justify-between mb-8 border-b border-slate-800 pb-6">
+                    <div class="flex items-center gap-3">
+                        <div id="step-badge-1" class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm">1</div>
+                        <span id="step-label-1" class="text-sm font-semibold text-white hidden sm:inline">Paket & Tamu</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-slate-800" id="line-1"></div>
+                    <div class="flex items-center gap-3">
+                        <div id="step-badge-2" class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 font-bold flex items-center justify-center text-sm">2</div>
+                        <span id="step-label-2" class="text-sm font-semibold text-slate-400 hidden sm:inline">Jadwal & Penjemputan</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-slate-800" id="line-2"></div>
+                    <div class="flex items-center gap-3">
+                        <div id="step-badge-3" class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 font-bold flex items-center justify-center text-sm">3</div>
+                        <span id="step-label-3" class="text-sm font-semibold text-slate-400 hidden sm:inline">Konfirmasi & Bayar</span>
+                    </div>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+                    <!-- Step 1: Package & Guests -->
+                    <div id="wizard-step-1" class="space-y-6">
+                        <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-mountain text-amber-500"></i> Pilih Paket & Jumlah Peserta
+                        </h3>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Paket Dipilih</label>
+                            <select id="package-select" onchange="updateBookingCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                <option value="Standard Sunrise Trek" data-price="450000">Standard Sunrise Trek - IDR 450k</option>
+                                <option value="Mount Batur + Natural Hot Spring" data-price="650000" selected>Mount Batur + Natural Hot Spring - IDR 650k</option>
+                                <option value="Private Jeep Tour + Hot Spring" data-price="950000">Private Jeep Tour + Hot Spring - IDR 950k</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Jumlah Tamu (Orang)</label>
+                                <div class="flex items-center gap-3">
+                                    <button type="button" onclick="adjustGuests(-1)" class="w-12 h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center text-white text-lg font-bold hover:bg-slate-800 transition-colors">-</button>
+                                    <input type="number" id="guest-count" value="2" min="1" max="20" onchange="updateBookingCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white text-center font-bold focus:outline-none focus:border-amber-500 transition-colors">
+                                    <button type="button" onclick="adjustGuests(1)" class="w-12 h-12 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center text-white text-lg font-bold hover:bg-slate-800 transition-colors">+</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Tambahan Opsional</label>
+                                <div class="bg-slate-950 border border-slate-800 rounded-2xl p-3 flex items-center justify-between">
+                                    <span class="text-sm text-slate-300">Sewa Kamera GoPro (+IDR 150k)</span>
+                                    <input type="checkbox" id="addon-gopro" onchange="updateBookingCalculation()" class="w-5 h-5 accent-amber-500 rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end pt-4">
+                            <button type="button" onclick="goToStep(2)" class="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-2xl transition-all shadow-lg shadow-amber-500/20">
+                                Lanjut: Jadwal <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Schedule & Pickup -->
+                    <div id="wizard-step-2" class="space-y-6 hidden">
+                        <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days text-amber-500"></i> Tanggal & Titik Penjemputan
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Tanggal Pendakian</label>
+                                <input type="date" id="booking-date" required class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Area Hotel / Penjemputan</label>
+                                <select id="pickup-area" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option value="Ubud (Gratis Penjemputan)">Ubud (Gratis Penjemputan)</option>
+                                    <option value="Kuta / Seminyak / Canggu (+IDR 150k)">Kuta / Seminyak / Canggu (+IDR 150k)</option>
+                                    <option value="Sanur / Denpasar (+IDR 100k)">Sanur / Denpasar (+IDR 100k)</option>
+                                    <option value="Meet directly at Toya Bungkah (Kintamani)">Langsung bertemu di Kintamani</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Detail Alamat Hotel / Vila</label>
+                            <input type="text" id="hotel-address" placeholder="Contoh: Ubud Inn Resort, Jl. Monkey Forest" required class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                        </div>
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="goToStep(1)" class="px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-2xl transition-all">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                            </button>
+                            <button type="button" onclick="goToStep(3)" class="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-2xl transition-all shadow-lg shadow-amber-500/20">
+                                Lanjut: Detail Kontak <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact & Summary -->
+                    <div id="wizard-step-3" class="space-y-6 hidden">
+                        <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-user-check text-amber-500"></i> Informasi Kontak & Rangkuman Biaya
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Nama Lengkap</label>
+                                <input type="text" id="contact-name" placeholder="Nama Anda" required class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Nomor WhatsApp / Telepon</label>
+                                <input type="tel" id="contact-phone" placeholder="+62 812-3456-7890" required class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <!-- Live Cost Summary Box -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 space-y-3">
+                            <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-2">Rincian Pembayaran</h4>
+                            <div class="flex justify-between text-sm text-slate-300">
+                                <span id="summary-package-name">Mount Batur + Natural Hot Spring (x2)</span>
+                                <span id="summary-package-price">IDR 1,300,000</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-slate-300">
+                                <span id="summary-addon-label">Tambahan GoPro</span>
+                                <span id="summary-addon-price">IDR 0</span>
+                            </div>
+                            <div class="border-t border-slate-800 pt-3 flex justify-between text-base font-bold text-white">
+                                <span>Total Estimasi Biaya</span>
+                                <span id="summary-total-price" class="text-amber-400 text-xl">IDR 1,300,000</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="goToStep(2)" class="px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-2xl transition-all">
+                                <i class="fa-solid fa-arrow-left mr-2"></i> Kembali
+                            </button>
+                            <button type="submit" class="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-slate-950 font-bold rounded-2xl transition-all shadow-xl shadow-amber-500/20">
+                                <i class="fa-solid fa-check-circle mr-2"></i> Konfirmasi & Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="custom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl text-center space-y-4">
+            <div id="modal-icon" class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 text-3xl flex items-center justify-center mx-auto mb-2">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-2xl font-bold text-white">Reservasi Berhasil!</h3>
+            <p id="modal-message" class="text-slate-300 text-sm leading-relaxed">Terima kasih telah memesan petualangan bersama AWAN TREKKING. Tim kami akan segera menghubungi Anda via WhatsApp untuk detail penjemputan.</p>
+            <button onclick="closeModal()" class="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-2xl transition-all shadow-lg shadow-amber-500/20">Tutup</button>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-mountain-sun text-sm"></i>
+                </div>
+                <span class="text-lg font-bold text-white">AWAN TREKKING</span>
+            </div>
+            <p class="text-sm text-slate-400 text-center">© 2026 AWAN TREKKING - Mount Batur Adventures. Seluruh hak cipta dilindungi.</p>
+            <div class="flex items-center space-x-4 text-slate-400">
+                <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                <a href="#" class="hover:text-amber-400"><i class="fa-brands fa-facebook text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile navigation
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Set default date to tomorrow
+        document.addEventListener('DOMContentLoaded', () => {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('booking-date').valueAsDate = tomorrow;
+            updateBookingCalculation();
+        });
+
+        // Quick select package from package cards
+        function selectPackage(packageName, price) {
+            const select = document.getElementById('package-select');
+            for(let i=0; i<select.options.length; i++) {
+                if(select.options[i].value === packageName) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            updateBookingCalculation();
+            // Scroll smoothly to booking section
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Adjust guest count buttons
+        function adjustGuests(amount) {
+            const input = document.getElementById('guest-count');
+            let val = parseInt(input.value) + amount;
+            if(val < 1) val = 1;
+            if(val > 20) val = 20;
+            input.value = val;
+            updateBookingCalculation();
+        }
+
+        // Wizard steps control
+        function goToStep(stepNumber) {
+            document.getElementById('wizard-step-1').classList.add('hidden');
+            document.getElementById('wizard-step-2').classList.add('hidden');
+            document.getElementById('wizard-step-3').classList.add('hidden');
+
+            document.getElementById(`wizard-step-${stepNumber}`).classList.remove('hidden');
+
+            // Update header indicators
+            for(let i=1; i<=3; i++) {
+                const badge = document.getElementById(`step-badge-${i}`);
+                const label = document.getElementById(`step-label-${i}`);
+                if(i < stepNumber) {
+                    badge.className = "w-8 h-8 rounded-full bg-emerald-500 text-slate-950 font-bold flex items-center justify-center text-sm";
+                    badge.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    label.className = "text-sm font-semibold text-emerald-400 hidden sm:inline";
+                } else if(i === stepNumber) {
+                    badge.className = "w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-sm";
+                    badge.innerText = i;
+                    label.className = "text-sm font-semibold text-white hidden sm:inline";
+                } else {
+                    badge.className = "w-8 h-8 rounded-full bg-slate-800 text-slate-400 font-bold flex items-center justify-center text-sm";
+                    badge.innerText = i;
+                    label.className = "text-sm font-semibold text-slate-400 hidden sm:inline";
+                }
+            }
+            
+            // Scroll slightly to top of booking box if needed
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Live calculation of booking costs
+        function updateBookingCalculation() {
+            const select = document.getElementById('package-select');
+            const selectedOption = select.options[select.selectedIndex];
+            const packageName = selectedOption.value;
+            const packagePrice = parseInt(selectedOption.getAttribute('data-price'));
+            const guests = parseInt(document.getElementById('guest-count').value) || 1;
+            const goproChecked = document.getElementById('addon-gopro').checked;
+
+            const baseTotal = packagePrice * guests;
+            const goproTotal = goproChecked ? (150000 * guests) : 0;
+            const grandTotal = baseTotal + goproTotal;
+
+            // Update summary UI
+            document.getElementById('summary-package-name').innerText = `${packageName} (x${guests})`;
+            document.getElementById('summary-package-price').innerText = `IDR ${baseTotal.toLocaleString('id-ID')}`;
+            
+            const addonLabel = document.getElementById('summary-addon-label');
+            const addonPrice = document.getElementById('summary-addon-price');
+            if(goproChecked) {
+                addonLabel.innerText = `Sewa Kamera GoPro (x${guests})`;
+                addonPrice.innerText = `IDR ${goproTotal.toLocaleString('id-ID')}`;
+                addonLabel.parentElement.style.display = 'flex';
+            } else {
+                addonLabel.parentElement.style.display = 'none';
+            }
+
+            document.getElementById('summary-total-price').innerText = `IDR ${grandTotal.toLocaleString('id-ID')}`;
+        }
+
+        // Handle form submission
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const date = document.getElementById('booking-date').value;
+            
+            document.getElementById('modal-title').innerText = "Reservasi Berhasil!";
+            document.getElementById('modal-message').innerText = `Terima kasih ${name}! Pendakian Anda untuk tanggal ${date} telah tercatat dalam sistem baru kami. Tim AWAN TREKKING akan segera mengirimkan konfirmasi via WhatsApp.`;
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
